@@ -1,8 +1,8 @@
 {
- "ts": "2026-11-24T11:35:51",
+ "ts": "2026-11-24T10:40:59",
  "tot_bandi_portale": 292,
  "tot_rilevanti": 11,
- "nuovi": 11,
+ "nuovi": 0,
  "bandi": [
   {
    "id": "1078813",
@@ -18,7 +18,7 @@
    "categorie": [
     "Ottimizzazione & Simulazione"
    ],
-   "nuovo": true
+   "nuovo": false
   },
   {
    "id": "1072182",
@@ -35,7 +35,7 @@
     "AI & Data Science",
     "Software & ICT"
    ],
-   "nuovo": true
+   "nuovo": false
   },
   {
    "id": "1070430",
@@ -51,7 +51,7 @@
    "categorie": [
     "GIS & Rilievo 3D"
    ],
-   "nuovo": true
+   "nuovo": false
   },
   {
    "id": "1080661",
@@ -67,7 +67,7 @@
    "categorie": [
     "Software & ICT"
    ],
-   "nuovo": true
+   "nuovo": false
   },
   {
    "id": "1085431",
@@ -83,7 +83,7 @@
    "categorie": [
     "Software & ICT"
    ],
-   "nuovo": true
+   "nuovo": false
   },
   {
    "id": "1082262",
@@ -99,7 +99,7 @@
    "categorie": [
     "GIS & Rilievo 3D"
    ],
-   "nuovo": true
+   "nuovo": false
   },
   {
    "id": "1067723",
@@ -115,7 +115,7 @@
    "categorie": [
     "Software & ICT"
    ],
-   "nuovo": true
+   "nuovo": false
   },
   {
    "id": "1071206",
@@ -131,7 +131,7 @@
    "categorie": [
     "Software & ICT"
    ],
-   "nuovo": true
+   "nuovo": false
   },
   {
    "id": "1089722",
@@ -148,7 +148,7 @@
     "GIS & Rilievo 3D",
     "Software & ICT"
    ],
-   "nuovo": true
+   "nuovo": false
   },
   {
    "id": "1085460",
@@ -164,7 +164,7 @@
    "categorie": [
     "GIS & Rilievo 3D"
    ],
-   "nuovo": true
+   "nuovo": false
   },
   {
    "id": "964920",
@@ -180,7 +180,7 @@
    "categorie": [
     "Software & ICT"
    ],
-   "nuovo": true
+   "nuovo": false
   }
  ]
 }
