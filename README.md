@@ -12,6 +12,22 @@ Premi **"Aggiorna ora"** in alto a destra nella pagina: si apre il workflow
 GitHub gia autenticato, clicca **"Run workflow"** e dopo circa un minuto la
 pagina si ricarica da sola.
 
+## Installalo su ogni dispositivo
+
+**Linux** — una riga da terminale, nessun permesso di root, crea "Bandi Kode"
+nel menu applicazioni:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/andriatz/bandi-kode/main/launcher/install.sh | bash
+```
+
+Se la voce non compare subito nel menu, riavvia la sessione o dai
+`update-desktop-database ~/.local/share/applications`. Per rimuoverlo:
+`rm ~/.local/share/applications/bandi-kode.desktop ~/.local/share/icons/bandi-kode.svg`
+
+**Telefono** — apri la pagina nel browser e usa "Aggiungi alla schermata
+Home" (Android) o "Aggiungi a Home" (iOS): si comporta come un'app.
+
 ## Cosa resta dentro
 
 Un bando entra nella pagina solo se matcha almeno una categoria Kode:
