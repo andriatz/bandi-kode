@@ -1,0 +1,186 @@
+{
+ "ts": "2026-11-24T11:35:51",
+ "tot_bandi_portale": 292,
+ "tot_rilevanti": 11,
+ "nuovi": 11,
+ "bandi": [
+  {
+   "id": "1078813",
+   "oggetto": "Campagna marketing annuale su komoot 2027 Promozione di raccolte esistenti nel profilo Cammino Minerario di Santa Barbara e di 1 nuova raccolta realizzata da content creator: Content Creator presente nella regione per 3 giorni in primavera 2027 Creazione di una raccolta comprendente almeno 3 percorsi incluse le fotografie necessarie ed il contenuto editoriale Logistica, trasporti, vitto e alloggio del content creator Diritti di utilizzo di tutto il contenuto all'interno di komoot e diritti di utilizzo di 10 fotografie al di fuori della piattaforma komoot includendo sempre il link al tour o alla raccolta su komoot. Esclusa distribuzione a terze parti e editing delle fotografie; dove possibile richiesta menzione dei credits. I percorsi della raccolta verranno pubblicati anche nel profilo del creator per massimizzarne la visibilità - Creazione del contenuto editoriale multilingue: DE, FR, EN, IT - Targeting per attività e geografico - Aggiornamento quotidiano del report sull'andamento dei risultati (visualizzazioni, clicks, salvataggi, CTR,..) - Tutti i percorsi e le Raccolte sponsorizzate rimarranno online anche dopo la fine della sponsorizzazione generando ulteriore traffico organico Come da vostro preventivo ns protocollo n. 1853/26 CUP PR Sardegna FESR 2021-2027 , Priorità 6, Azione 6.2.1, Codice operazione ITI_CMSB_S4_03_A, CUP B39J25000910006",
+   "ente": "FONDAZIONE CAMMINO MINERARIO DI SANTA BARBARA",
+   "importo": "20.000,00",
+   "scadenza": "2026-11-24T12:00:00",
+   "pubblicazione": "2026-11-19T09:42:59",
+   "cpv": "79341400-0 - Servizi di campagne pubblicitarie",
+   "tipo_procedura": "Affidamento Diretto",
+   "contratto": "Servizi",
+   "link": "https://sardegnacat.regione.sardegna.it/portalegare/index.php/bandi?getdettaglio=yes&bando=1078813&tipobando=Bando&RicQ=NO&VisQ=NO&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-11-24T12:00:00",
+   "categorie": [
+    "Ottimizzazione & Simulazione"
+   ],
+   "nuovo": true
+  },
+  {
+   "id": "1072182",
+   "oggetto": "Progetto per la reingegnerizzazione del sistema informativo – fornitura triennale Licenze di Software applicativo manutenzione e servizi affini",
+   "ente": "Unione dei Comuni Monte Linas Dune di Piscinas",
+   "importo": "57.000,00",
+   "scadenza": "2026-11-24T13:00:00",
+   "pubblicazione": "2026-11-17T16:45:49",
+   "cpv": "72268000-1 - Servizi di fornitura di software",
+   "tipo_procedura": "Affidamento Diretto",
+   "contratto": "Servizi",
+   "link": "https://sardegnacat.regione.sardegna.it/portalegare/index.php/bandi?getdettaglio=yes&bando=1072182&tipobando=Bando&RicQ=NO&VisQ=NO&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-11-24T13:00:00",
+   "categorie": [
+    "AI & Data Science",
+    "Software & ICT"
+   ],
+   "nuovo": true
+  },
+  {
+   "id": "1070430",
+   "oggetto": "Bando Rettificato - INTERVENTO N.1: Servizi cartografici 1:2.000 sul centro urbano di Ulassai per 100 ettari; INTERVENTO N. 2: Attività di mappatura dei canali tombati linea di azione A delibera n. 37/1 del 14/12/2022 e n. 41/2 del 01/12/2023",
+   "ente": "COMUNE DI ULASSAI",
+   "importo": "32.881,89",
+   "scadenza": "2026-11-25T10:00:00",
+   "pubblicazione": "2026-11-17T12:28:17",
+   "cpv": "71354000-4 - Servizi di cartografia",
+   "tipo_procedura": "Affidamento Diretto",
+   "contratto": "Servizi",
+   "link": "https://sardegnacat.regione.sardegna.it/portalegare/index.php/bandi?getdettaglio=yes&bando=1070430&tipobando=Bando&RicQ=NO&VisQ=NO&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-11-25T10:00:00",
+   "categorie": [
+    "GIS & Rilievo 3D"
+   ],
+   "nuovo": true
+  },
+  {
+   "id": "1080661",
+   "oggetto": "AFFIDAMENTO DEL SERVIZIO DI PROGETTAZIONE, REALIZZAZIONE, MIGRAZIONE, MESSA IN ESERCIZIO, GESTIONE E MANUTENZIONE DEL NUOVO SITO ISTITUZIONALE DEL COMUNE DI GADONI, COMPRENSIVO DEI SERVIZI DI DOMINIO, POSTA ELETTRONICA, HOSTING, SICUREZZA E ASSISTENZA TRIENNALE 2027/2029. RICHIESTA DI PREVENTIVO",
+   "ente": "COMUNE DI GADONI",
+   "importo": "14.800,00",
+   "scadenza": "2026-11-26T10:00:00",
+   "pubblicazione": "2026-11-19T14:48:37",
+   "cpv": "72413000-8 - Servizi di progettazione di siti per il World wide web (WWW)",
+   "tipo_procedura": "Affidamento Diretto",
+   "contratto": "Servizi",
+   "link": "https://sardegnacat.regione.sardegna.it/portalegare/index.php/bandi?getdettaglio=yes&bando=1080661&tipobando=Bando&RicQ=YES&VisQ=NO&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-11-26T10:00:00",
+   "categorie": [
+    "Software & ICT"
+   ],
+   "nuovo": true
+  },
+  {
+   "id": "1085431",
+   "oggetto": "FORNITURA N. 3 LICENZE AUTODESK AEC COLLECTION (ALLINEAMENTO A CONTRATTO TRIENNALE ESISTENTE N. 110003981735 )",
+   "ente": "CONSORZIO DI BONIFICA DELL'ORISTANESE",
+   "importo": "13.200,00",
+   "scadenza": "2026-11-27T12:00:00",
+   "pubblicazione": "2026-11-23T10:53:13",
+   "cpv": "48321000-4 - Pacchetti software per disegno assistito dal calcolatore (CAD)",
+   "tipo_procedura": "Affidamento Diretto",
+   "contratto": "Forniture",
+   "link": "https://sardegnacat.regione.sardegna.it/portalegare/index.php/bandi?getdettaglio=yes&bando=1085431&tipobando=Bando&RicQ=YES&VisQ=NO&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-11-27T12:00:00",
+   "categorie": [
+    "Software & ICT"
+   ],
+   "nuovo": true
+  },
+  {
+   "id": "1082262",
+   "oggetto": "Servizio di supporto al RUP per Building Information Modeling (BIM) nell’ambito del progetto REFUEL",
+   "ente": "SOTACARBO",
+   "importo": "47.424,00",
+   "scadenza": "2026-11-27T20:00:00",
+   "pubblicazione": "2026-11-23T16:07:22",
+   "cpv": "71300000-1 - Servizi di ingegneria",
+   "tipo_procedura": "Affidamento Diretto",
+   "contratto": "Servizi",
+   "link": "https://sardegnacat.regione.sardegna.it/portalegare/index.php/bandi?getdettaglio=yes&bando=1082262&tipobando=Bando&RicQ=YES&VisQ=NO&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-11-27T20:00:00",
+   "categorie": [
+    "GIS & Rilievo 3D"
+   ],
+   "nuovo": true
+  },
+  {
+   "id": "1067723",
+   "oggetto": "Avvio invito a unico operatore in unicità tramite piattaforma Sardegna CAT per il rinnovo del servizio di Accesso alla banca dati SCOPUS di ELSEVIER per il Progetto BSR 2026",
+   "ente": "SARDEGNA RICERCHE",
+   "importo": "19.337,46",
+   "scadenza": "2026-11-30T12:00:00",
+   "pubblicazione": "2026-11-17T12:25:40",
+   "cpv": "72321000-1 - Servizi di banche dati a valore aggiunto",
+   "tipo_procedura": "Affidamento Diretto",
+   "contratto": "Servizi",
+   "link": "https://sardegnacat.regione.sardegna.it/portalegare/index.php/bandi?getdettaglio=yes&bando=1067723&tipobando=Bando&RicQ=YES&VisQ=NO&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-11-30T12:00:00",
+   "categorie": [
+    "Software & ICT"
+   ],
+   "nuovo": true
+  },
+  {
+   "id": "1071206",
+   "oggetto": "servizio di collaudo e verifica di conformità delle piattaforme software e dell’hardware associato - PNRR MISSIONE 4: ISTRUZIONE E RICERCA Componente 1 – Potenziamento dell’offerta dei servizi di istruzione: dagli asili nido alle Università Investimento 1.5 “Sviluppo del sistema di formazione professionale terziaria (ITS)” Azione “Potenziamento laboratori ITS Academy”",
+   "ente": "COMUNE DI OLBIA",
+   "importo": "9.800,00",
+   "scadenza": "2026-11-30T12:00:00",
+   "pubblicazione": "2026-11-23T11:13:49",
+   "cpv": "48700000-5 - Utilities per pacchetti software",
+   "tipo_procedura": "Affidamento Diretto",
+   "contratto": "Servizi",
+   "link": "https://sardegnacat.regione.sardegna.it/portalegare/index.php/bandi?getdettaglio=yes&bando=1071206&tipobando=Bando&RicQ=YES&VisQ=NO&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-11-30T12:00:00",
+   "categorie": [
+    "Software & ICT"
+   ],
+   "nuovo": true
+  },
+  {
+   "id": "1089722",
+   "oggetto": "Rinnovo biennale della licenza software Esri Arc Gis (Affidamento diretto ai sensi del D.Lgs. 36/2023 art. 50, c 1, lett. b) installata presso il Servizio Dighe e fornitura di n. 2 giornate formative in ambiente ArcGIS da erogarsi entro il 31/12/2026.",
+   "ente": "ENTE ACQUE DELLA SARDEGNA",
+   "importo": "2.500,00",
+   "scadenza": "2026-11-30T12:00:00",
+   "pubblicazione": "2026-11-23T13:04:45",
+   "cpv": "48000000-8 - Pacchetti software e sistemi di informazione",
+   "tipo_procedura": "Affidamento Diretto",
+   "contratto": "Forniture",
+   "link": "https://sardegnacat.regione.sardegna.it/portalegare/index.php/bandi?getdettaglio=yes&bando=1089722&tipobando=Bando&RicQ=YES&VisQ=NO&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-11-30T12:00:00",
+   "categorie": [
+    "GIS & Rilievo 3D",
+    "Software & ICT"
+   ],
+   "nuovo": true
+  },
+  {
+   "id": "1085460",
+   "oggetto": "redazione del Capitolato Informativo BIM relativo ai lavori denominati «INTERVENTI PER LA MITIGAZIONE DEL RISCHIO GEOMORFOLOGICO IN LOCALITÀ FURROS» – CUP G84D25005610002",
+   "ente": "COMUNE DI BONORVA",
+   "importo": "8.085,00",
+   "scadenza": "2026-12-01T10:00:00",
+   "pubblicazione": "2026-11-20T13:37:00",
+   "cpv": "71300000-1 - Servizi di ingegneria",
+   "tipo_procedura": "Affidamento Diretto",
+   "contratto": "Servizi",
+   "link": "https://sardegnacat.regione.sardegna.it/portalegare/index.php/bandi?getdettaglio=yes&bando=1085460&tipobando=Bando&RicQ=YES&VisQ=NO&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-12-01T10:00:00",
+   "categorie": [
+    "GIS & Rilievo 3D"
+   ],
+   "nuovo": true
+  },
+  {
+   "id": "964920",
+   "oggetto": "Bando Rettificato - PROCEDURA APERTA INFORMATIZZATA MEDIANTE UTILIZZO DELLA PAD SARDEGNACAT PER L’AFFIDAMENTO DEI SERVIZI DI CENSIMENTO, RIORDINO, INVENTARIAZIONE, DIGITALIZZAZIONE E VALORIZZAZIONE DELL’ARCHIVIO DI DEPOSITO E STORICO DELL’ARPAS NELL’AMBITO DEL PROGETTO “MEMORIA E INNOVAZIONE: ARCHIVIO DIGITALE E SPAZI VIRTUALI PER L’AMBIENTE E IL TERRITORIO”, FINANZIATO A VALERE SUL PR SARDEGNA FESR 2021–2027",
+   "ente": "AGENZIA REGIONALE PROTEZIONE AMBIENTE DELLA SARDEGNA",
+   "importo": "822.175,00",
+   "scadenza": "2026-12-02T12:00:00",
+   "pubblicazione": "2026-10-16T07:45:03",
+   "cpv": "92512000-3 - Servizi di archivi",
+   "tipo_procedura": "Aperta",
+   "contratto": "Servizi",
+   "link": "https://sardegnacat.regione.sardegna.it/portalegare/index.php/bandi?getdettaglio=yes&bando=964920&tipobando=Bando&RicQ=YES&VisQ=SI&tipoDoc=BANDO_GARA_PORTALE&xslt=XSLT_BANDO_GARA_PORTALE&scadenzaBando=2026-12-02T12:00:00",
+   "categorie": [
+    "Software & ICT"
+   ],
+   "nuovo": true
+  }
+ ]
+}

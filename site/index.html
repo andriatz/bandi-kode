@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bandi Kode — Sardegna CAT</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --card: #181b21;
+    --border: #262b33;
+    --text: #e8eaed;
+    --muted: #9aa0aa;
+    --accent: #4f8cff;
+    --accent-soft: rgba(79, 140, 255, .12);
+    --new: #ffd166;
+    --warn: #ff7b72;
+    --ok: #3fb950;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--text);
+    font: 15px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif;
+    padding-bottom: 80px;
+  }
+  header {
+    position: sticky; top: 0; z-index: 10;
+    background: rgba(15, 17, 21, .92); backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 16px 12px;
+  }
+  .top { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  h1 { font-size: 19px; font-weight: 700; letter-spacing: .2px; }
+  h1 span { color: var(--accent); }
+  .meta { color: var(--muted); font-size: 12.5px; margin-top: 2px; }
+  .btn {
+    margin-left: auto;
+    background: var(--accent); color: #fff; border: 0; border-radius: 8px;
+    padding: 9px 16px; font-size: 14px; font-weight: 600; cursor: pointer;
+    white-space: nowrap; text-decoration: none; display: inline-block;
+  }
+  .btn:active { opacity: .85; }
+  .controls { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 11px; }
+  input[type=search] {
+    flex: 1 1 180px; min-width: 150px;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 8px; padding: 8px 12px; color: var(--text); font-size: 14px;
+    outline: none;
+  }
+  input[type=search]:focus { border-color: var(--accent); }
+  select {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 8px; padding: 8px 10px; color: var(--text); font-size: 13px;
+    outline: none;
+  }
+  .chips { display: flex; gap: 7px; flex-wrap: wrap; margin-top: 10px; }
+  .chip {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 999px; padding: 5px 13px; font-size: 12.5px;
+    color: var(--muted); cursor: pointer; user-select: none;
+    transition: all .15s;
+  }
+  .chip.on {
+    background: var(--accent-soft); border-color: var(--accent);
+    color: var(--accent); font-weight: 600;
+  }
+  .switches { display: flex; gap: 7px; flex-wrap: wrap; margin-top: 10px; }
+  .chip.gold.on {
+    background: rgba(255, 209, 102, .12); border-color: var(--new);
+    color: var(--new);
+  }
+  main { max-width: 900px; margin: 0 auto; padding: 16px; }
+  .count { color: var(--muted); font-size: 13px; margin: 0 0 12px; }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; padding: 15px 16px; margin-bottom: 12px;
+  }
+  .card.new { border-left: 3px solid var(--new); }
+  .oggetto { font-size: 15.5px; font-weight: 650; line-height: 1.35;
+    text-decoration: none; color: var(--text); }
+  .oggetto:hover { color: var(--accent); }
+  .tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 9px; }
+  .tag {
+    background: var(--accent-soft); color: var(--accent);
+    border-radius: 999px; padding: 2.5px 10px; font-size: 11.5px;
+    font-weight: 600;
+  }
+  .tag.rs { color: #d2a8ff; background: rgba(210, 168, 255, .12); }
+  .tag.ict { color: var(--muted); background: rgba(154, 160, 170, .1); }
+  .tag.nuovo {
+    background: var(--new); color: #4d3800; font-weight: 700;
+  }
+  .info { margin-top: 10px; color: var(--muted); font-size: 13px;
+    display: flex; gap: 14px; flex-wrap: wrap; }
+  .info b { color: var(--text); font-weight: 600; }
+  .deadline { font-weight: 700; }
+  .deadline.soon { color: var(--warn); }
+  .deadline.mid { color: var(--new); }
+  .deadline.later { color: var(--ok); }
+  .empty { text-align: center; color: var(--muted); padding: 60px 20px; }
+  .empty .big { font-size: 30px; margin-bottom: 10px; }
+  .toast {
+    position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%);
+    background: var(--ok); color: #fff; border-radius: 10px;
+    padding: 10px 18px; font-size: 14px; font-weight: 600;
+    box-shadow: 0 6px 24px rgba(0,0,0,.4); opacity: 0;
+    transition: opacity .3s; pointer-events: none; z-index: 50;
+  }
+  .toast.show { opacity: 1; }
+  a.plain { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); font-size: 11.5px;
+    padding: 18px 16px 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="top">
+    <div>
+      <h1>Bandi <span>Kode</span></h1>
+      <div class="meta" id="meta">dato non ancora caricato</div>
+    </div>
+    <a class="btn" target="_blank" rel="noopener"
+       href="https://github.com/andriatz/bandi-kode/actions/workflows/update.yml">&#8635; Aggiorna ora</a>
+  </div>
+  <div class="controls">
+    <input type="search" id="q" placeholder="Cerca oggetto o ente..." autocomplete="off">
+    <select id="sort">
+      <option value="scadenza">Scadenza (prossima prima)</option>
+      <option value="pubblicazione">Pubblicazione (recente prima)</option>
+      <option value="importo">Importo (alto prima)</option>
+      <option value="nuovi">Prima i nuovi</option>
+    </select>
+  </div>
+  <div class="chips" id="chips"></div>
+  <div class="switches">
+    <span class="chip gold" id="ch-new" title="Solo bandi mai visti prima dell'ultimo aggiornamento">solo NUOVI</span>
+  </div>
+</header>
+
+<main>
+  <div class="count" id="count"></div>
+  <div id="list"></div>
+  <footer>
+    <span id="foot"></span>
+  </footer>
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const CATS = [
+  ["AI & Data Science",        "AI"],
+  ["GIS & Rilievo 3D",         "GIS/3D"],
+  ["Asset & Infrastrutture",   "Asset"],
+  ["Ottimizzazione & Simulazione", "Ottim."],
+  ["R&S e Innovazione",        "R&S"],
+  ["Software & ICT",           "ICT"],
+];
+const WORKFLOW_URL =
+  "https://github.com/andriatz/bandi-kode/actions/workflows/update.yml";
+
+let DATA = null;
+let state = {
+  q: "", cats: new Set(), onlyNew: false, sort: "scadenza",
+};
+
+// ---- persistenza filtri ----
+try {
+  const saved = JSON.parse(localStorage.getItem("bandi-kode") || "{}");
+  state.q = saved.q || "";
+  state.sort = saved.sort || "scadenza";
+  state.onlyNew = !!saved.onlyNew;
+  (saved.cats || []).forEach(c => state.cats.add(c));
+} catch (e) {}
+
+function saveState() {
+  try {
+    localStorage.setItem("bandi-kode", JSON.stringify({
+      q: state.q, sort: state.sort, onlyNew: state.onlyNew,
+      cats: [...state.cats],
+    }));
+  } catch (e) {}
+}
+
+// ---- utilita ----
+const $ = id => document.getElementById(id);
+const esc = s => (s || "").replace(/&/g, "&amp;").replace(/</g, "&lt;")
+  .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
+function fmtImporto(v) {
+  if (!v) return null;
+  const n = parseFloat(String(v).replace(/\./g, "").replace(",", "."));
+  if (isNaN(n)) return v;
+  return "&#8364; " + n.toLocaleString("it-IT");
+}
+function pareImporto(v) {
+  const n = parseFloat(String(v || "").replace(/\./g, "").replace(",", "."));
+  return isNaN(n) ? -1 : n;
+}
+function fmtDT(iso) {
+  if (!iso) return "n/d";
+  const d = new Date(iso);
+  if (isNaN(d)) return iso;
+  return d.toLocaleDateString("it-IT", {day: "2-digit", month: "2-digit",
+    year: "numeric"}) + " " +
+    d.toLocaleTimeString("it-IT", {hour: "2-digit", minute: "2-digit"});
+}
+function giorniAllaScadenza(iso) {
+  if (!iso) return null;
+  const d = new Date(iso);
+  if (isNaN(d)) return null;
+  return Math.ceil((d - Date.now()) / 86400000);
+}
+function catClass(c) {
+  if (c === "R&S e Innovazione") return "rs";
+  if (c === "Software & ICT") return "ict";
+  return "";
+}
+
+// ---- rendering ----
+function renderChips() {
+  const box = $("chips");
+  box.innerHTML = "";
+  for (const [full, short] of CATS) {
+    const el = document.createElement("span");
+    el.className = "chip" + (state.cats.has(full) ? " on" : "");
+    el.textContent = short;
+    el.title = full;
+    el.onclick = () => {
+      if (state.cats.has(full)) state.cats.delete(full);
+      else state.cats.add(full);
+      el.classList.toggle("on");
+      saveState(); render();
+    };
+    box.appendChild(el);
+  }
+}
+
+function render() {
+  const list = $("list");
+  if (!DATA) return;
+  let bandi = DATA.bandi || [];
+
+  if (state.q) {
+    const q = state.q.toLowerCase();
+    bandi = bandi.filter(b =>
+      (b.oggetto || "").toLowerCase().includes(q) ||
+      (b.ente || "").toLowerCase().includes(q));
+  }
+  if (state.cats.size)
+    bandi = bandi.filter(b => b.categorie.some(c => state.cats.has(c)));
+  if (state.onlyNew)
+    bandi = bandi.filter(b => b.nuovo);
+
+  const cmp = {
+    scadenza: (a, b) => (a.scadenza || "9").localeCompare(b.scadenza || "9"),
+    pubblicazione: (a, b) =>
+      (b.pubblicazione || "").localeCompare(a.pubblicazione || ""),
+    importo: (a, b) => pareImporto(b.importo) - pareImporto(a.importo),
+    nuovi: (a, b) => (b.nuovo - a.nuovo) ||
+      (a.scadenza || "9").localeCompare(b.scadenza || "9"),
+  }[state.sort];
+  bandi.sort(cmp);
+
+  $("count").textContent =
+    bandi.length + " di " + (DATA.tot_rilevanti ?? "—") +
+    " opportunita Kode su " + (DATA.tot_bandi_portale ?? "—") +
+    " bandi del portale";
+
+  if (!bandi.length) {
+    list.innerHTML =
+      '<div class="empty"><div class="big">&#128270;</div>' +
+      "Nessun bando con i filtri correnti.</div>";
+    return;
+  }
+  list.innerHTML = bandi.map(b => {
+    const g = giorniAllaScadenza(b.scadenza);
+    let dl = "scadenza n/d", cls = "";
+    if (g !== null) {
+      dl = g < 0 ? "SCADUTO" : "tra " + g + "g";
+      cls = g < 7 ? "soon" : g < 15 ? "mid" : "later";
+    }
+    const tags = b.categorie.map(c =>
+      '<span class="tag ' + catClass(c) + '">' + esc(c) + "</span>").join("") +
+      (b.nuovo ? '<span class="tag nuovo">NUOVO</span>' : "");
+    return '<div class="card' + (b.nuovo ? " new" : "") + '">' +
+      '<a class="oggetto" target="_blank" rel="noopener" href="' + esc(b.link) + '">' +
+      esc(b.oggetto) + "</a>" +
+      '<div class="tags">' + tags + "</div>" +
+      '<div class="info">' +
+      "<div><b>" + esc(b.ente) + "</b></div>" +
+      (b.importo ? "<div>" + fmtImporto(b.importo) + "</div>" : "") +
+      '<div class="deadline ' + cls + '">' + dl + " &#183; " +
+      fmtDT(b.scadenza) + "</div>" +
+      "<div>" + esc(b.tipo_procedura || b.contratto || "") + "</div>" +
+      "</div></div>";
+  }).join("");
+}
+
+function renderMeta() {
+  const t = DATA.ts ? new Date(DATA.ts) : null;
+  $("meta").textContent = "aggiornato: " +
+    (t ? t.toLocaleString("it-IT") : "n/d") +
+    "  \u00b7  " + (DATA.nuovi ?? "?") + " nuovi all'ultimo giro";
+  $("foot").innerHTML =
+    "Fonte: Portale Acquisti Regione Sardegna (Sardegna CAT) &#183; " +
+    'rigenera i dati dal <a class="plain" target="_blank" rel="noopener" ' +
+    'href="' + WORKFLOW_URL + '">workflow GitHub</a>';
+}
+
+function toast(msg) {
+  const t = $("toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  setTimeout(() => t.classList.remove("show"), 4000);
+}
+
+// ---- dati ----
+async function load(quiet) {
+  try {
+    const res = await fetch("bandi.json?t=" + Date.now(), {cache: "no-store"});
+    if (!res.ok) return;
+    const fresh = await res.json();
+    if (DATA && fresh.ts !== DATA.ts) {
+      toast("Dati aggiornati: " + (fresh.nuovi ?? "?") + " bandi nuovi");
+    }
+    DATA = fresh;
+    renderMeta();
+    render();
+  } catch (e) {
+    if (!quiet) $("meta").textContent = "impossibile leggere i dati";
+  }
+}
+
+// ---- eventi ----
+$("q").value = state.q;
+$("sort").value = state.sort;
+$("ch-new")?.classList.toggle("on", state.onlyNew);
+$("q").addEventListener("input", e => {
+  state.q = e.target.value.trim(); saveState(); render();
+});
+$("sort").addEventListener("change", e => {
+  state.sort = e.target.value; saveState(); render();
+});
+$("ch-new").onclick = () => {
+  state.onlyNew = !state.onlyNew;
+  $("ch-new").classList.toggle("on", state.onlyNew);
+  saveState(); render();
+};
+
+renderChips();
+load(false);
+setInterval(() => load(true), 15000);
+</script>
+</body>
+</html>
